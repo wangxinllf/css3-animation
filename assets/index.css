@@ -1,0 +1,186 @@
+body {
+    background-color: #000;
+    color: #ffffff;
+}
+.nav ul {
+    height: 60px;
+    text-align: center;
+}
+.nav ul li {
+    display: inline-block;
+    height: 60px;
+    padding: 0 40px;
+    
+   
+}
+.nav ul li a{
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+.nav ul li a:hover{
+    color: #3fd99e;
+}
+.banner {
+    height: 500px;
+    background-image: url(../images/bg1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hetong {
+    font-size: 26px;
+}
+.peng {
+    display: flex;
+    width: 100%;
+    /* width: 424px; */
+    margin-top: 15px;
+    justify-content: space-between;
+    opacity: 0;
+
+}
+.banner .mingqi{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* 两个p标签设置不一样大小的字 */
+/* .banner p {
+    font-size: 26px;
+} */
+/* .banner p:nth-of-type(2){
+    font-size: 20px; */
+
+
+    /* 自定义字体 */
+@font-face {
+    font-family: 'LH';
+    src: url(../fonts/qtzzgfylhg.eot) format('embedded-opentype'),
+         url(../fonts/qtzzgfylhg.woff) format('woff');
+}
+.main-content {
+    font-family: 'LH';
+    font-size: 56px;
+    margin-top: 15px;
+}
+
+/* 变换的中心 */
+.main-content:nth-of-type(1){
+    transform-origin: right;
+}
+.main-content:nth-of-type(2){
+    transform-origin: left;
+}
+
+/* 第一个字变大 */
+.main-content:first-letter{
+    font-size: 100px;
+}
+/* 设置文本方向（选择出相同类名的第一个标签） */
+.main-content:nth-child(1){
+      /* 这两条样式配合使用，可以修改文字的排列方向 */
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+
+.btn a {
+    display: inline-block;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #036a2f;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    animation: colorChange 5s infinite;
+}
+/* 按钮颜色动画 */
+@keyframes colorChange {
+    0%{
+        background-color: #036a2f;
+    }
+    30%{
+        background-color: crimson;
+    }
+    60%{
+        background-color: darkmagenta;
+    }
+}
+
+/* 左边文字动画 */
+@keyframes leftText{
+    0%{
+        transform: scaleX(.2);
+    }
+    30%{
+        transform: scaleX(.8) translateX(-150px);  
+    }
+    50%{
+          transform: translateX(0);
+    }
+    70%{
+          transform: translateX(-20px);
+    }    
+}
+/* 右边文字动画 */
+@keyframes rightText{
+    0%{
+       transform: scaleX(.2);
+    }
+    30%{
+        transform: scaleX(.8) translateX(150px);  
+    }
+    50%{
+        transform: translateX(0);
+    }
+    70%{
+        transform: translateX(20px);
+    }
+}
+/* 震动动画  */
+@keyframes shake{
+    10%{
+        margin: -40px 0 0 -40px;
+    }
+    15%{
+        margin: -40px -40px 0 0;
+    }
+    20%{
+        margin: 0 -40px -40px 0;
+    }
+    25%{
+        margin: 0 0 -40px -40px;
+    }
+
+    
+    30%{
+        margin: -20px 0 0 -20px;
+    }
+    40%{
+        margin: -20px -20px 0 0;
+    }
+    50%{
+        margin: 0 -20px -20px 0;
+    }
+    60%{
+        margin: 0 0 -20px -20px;
+    }
+
+    
+    70%{
+        margin: -10px 0 0 -10px;
+    }
+    80%{
+        margin: -10px -10px 0 0;
+    }
+    90%{
+        margin: 0 -10px -10px 0;
+    }
+    100%{
+        margin: 0 0 -10px -10px;
+    }
+}
